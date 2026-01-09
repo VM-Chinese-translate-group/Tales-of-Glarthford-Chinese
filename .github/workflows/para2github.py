@@ -72,7 +72,7 @@ def save_translation(zh_cn_dict: dict[str, str], path: Path) -> None:
     :param path: 原始文件路径
     """
     dir_path = Path("CNPack") / path.parent
-    dir_path = Path(str(dir_path).replace("CNPack", "CNPack/assets/test/lang"))
+    dir_path = Path(str(dir_path).replace("CNPack", "CNPack/assets/vm/lang"))
     dir_path.mkdir(parents=True, exist_ok=True)
     file_path = dir_path / "zh_cn.json"
     source_path = str(file_path).replace("zh_cn.json", "en_us.json").replace("CNPack", "Source")
@@ -246,12 +246,17 @@ def main() -> None:
     get_files()
     ftbquests_dict = {}
     for file_id, path in zip(file_id_list, file_path_list):
-        if "TM" in path:  # 跳过 TM 文件
+        # 优化：只处理以 en_us.json 结尾的文件，并跳过包含 TM 的文件
+        if not path.lower().endswith("en_us.json") or "TM" in path:
             continue
+
         zh_cn_dict = process_translation(file_id, Path(path))
         zh_cn_list.append(zh_cn_dict)
+
+        # 收集 FTB Quests 的翻译以便后续生成 SNBT
         if "kubejs/assets/quests/lang/" in path:
             ftbquests_dict = ftbquests_dict | zh_cn_dict
+
         save_translation(zh_cn_dict, Path(path))
         print(f"已从Patatranz下载到仓库：{re.sub('en_us.json', 'zh_cn.json', path)}")
     if(len(ftbquests_dict) > 0):
