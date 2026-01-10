@@ -1,20 +1,20 @@
 <div align="center"> 
-   <h1>Final Paradox 简体中文翻译</h1>
+   <h1>From The shElves 简体中文翻译</h1>
 </div>
 
-Planet Minecraft|加载器|地图版本|汉化维护状态
+官网|加载器|地图版本|汉化维护状态
 :-|:-|:-|:-
-[链接](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/maps/3166897-ctm-final-paradox-dlc-nightmare-awakening-map)|原版|1.16.5 1.1.14|*维护中*|
+[链接](https://surenastudio.com/projects/shelves)|原版|1.21.11 1.2.1|*维护中*|
 
 ---
 
-汉化项目：[Paratranz](https://paratranz.cn/projects/8382)
+汉化项目：[Paratranz](https://paratranz.cn/projects/17625)
 
-汉化发布：[VM汉化组官网](https://vmct-cn.top/map/final)
+汉化发布：[VM汉化组官网](https://vmct-cn.top/doing)
 
 项目主管：SevenKiyo
 
-译者：[查看贡献者排行榜](https://paratranz.cn/projects/8382/leaderboard)
+译者：[查看贡献者排行榜](https://paratranz.cn/projects/17625/leaderboard)
 
 
 ---
