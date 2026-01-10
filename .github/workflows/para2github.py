@@ -151,9 +151,6 @@ def process_translation(file_id: int, path: Path) -> dict[str, str]:
         value = re.sub(r'\\\\', r'\\', value)
         value = re.sub(r'\\n', '\n', value)
         
-        # 【核心修改】仅当值包含中文字符时，才将常规空格替换为不间断空格
-        if re.search(r'[\u4e00-\u9fff]', value):
-            value = re.sub(' ', '\u00A0', value)
             
         # 保存替换后的值
         zh_cn_dict[key] = value
