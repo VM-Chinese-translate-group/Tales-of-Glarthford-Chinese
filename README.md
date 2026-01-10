@@ -1,20 +1,20 @@
 <div align="center"> 
-   <h1>From The shElves 简体中文翻译</h1>
+   <h1>Tales of Glarthford 简体中文翻译</h1>
 </div>
 
 官网|加载器|地图版本|汉化维护状态
 :-|:-|:-|:-
-[链接](https://surenastudio.com/projects/shelves)|原版|1.21.11 1.2.1|*维护中*|
+[链接](https://www.crowdford.com/maps/tales_of_glarthford/)|原版|1.19.4 1.3.0|*翻译中*|
 
 ---
 
-汉化项目：[Paratranz](https://paratranz.cn/projects/17625)
+汉化项目：[Paratranz](https://paratranz.cn/projects/17616)
 
 汉化发布：[VM汉化组官网](https://vmct-cn.top/doing)
 
 项目主管：SevenKiyo
 
-译者：[查看贡献者排行榜](https://paratranz.cn/projects/17625/leaderboard)
+译者：[查看贡献者排行榜](https://paratranz.cn/projects/17616/leaderboard)
 
 
 ---
