@@ -60,7 +60,7 @@ jobs:
         run: |
           # 定义源和目标目录
           # 注意源目录末尾的斜杠 / ，这至关重要
-          SOURCE_DIR="CNPack/vm/test/"
+          SOURCE_DIR="CNPack/assets/vm/"
           DEST_DIR="CNPack/assets/vm"
 
           # 确保源和目标目录都存在
