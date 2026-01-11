@@ -248,8 +248,11 @@ def main() -> None:
     get_files()
     ftbquests_dict = {}
     for file_id, path in zip(file_id_list, file_path_list):
-        # 优化：只处理以 en_us.json 结尾的文件，并跳过包含 TM 的文件
-        if not path.lower().endswith("en_us.json") or "TM" in path:
+        # 只跳过包含 TM 的文件；允许同步 en_us 和 zh_cn
+        if "TM" in path:
+            continue
+
+        if not (path.lower().endswith("en_us.json") or path.lower().endswith("zh_cn.json")):
             continue
 
         zh_cn_dict = process_translation(file_id, Path(path))
