@@ -12,7 +12,7 @@
 
 汉化发布：[VM汉化组官网](https://vmct-cn.top/doing)
 
-项目主管：SevenKiyo
+项目主管：choko-takey
 
 译者：[查看贡献者排行榜](https://paratranz.cn/projects/17616/leaderboard)
 
