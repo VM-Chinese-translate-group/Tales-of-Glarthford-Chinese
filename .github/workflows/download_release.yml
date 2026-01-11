@@ -53,32 +53,6 @@ jobs:
       - name: Paratranz To GitHub
         run: python .github/workflows/para2github.py
 
-      # ====================================================================
-      # ======================= 修正后的重定向步骤 开始 ========================
-      # ====================================================================
-      - name: Redirect opolisutilities assets directory
-        run: |
-          # 定义源和目标目录
-          SOURCE_DIR="CNPack/assets/vm"
-          DEST_DIR="CNPack/assets/vm"
-
-          # 始终确保目录存在，防止空目录未被 git 跟踪导致检查失败
-          mkdir -p "$SOURCE_DIR" "$DEST_DIR"
-
-          # 如果源目录为空则跳过
-          if ! find "$SOURCE_DIR" -mindepth 1 -maxdepth 1 | read; then
-            echo "源目录为空，跳过重定向。"
-            exit 0
-          fi
-
-          echo "正在使用 rsync 移动 '$SOURCE_DIR' 的内容到 '$DEST_DIR'..."
-          # 同步目录内容，并在成功后删除源文件
-          rsync -av --remove-source-files "$SOURCE_DIR"/ "$DEST_DIR"/
-          echo "操作完成。"
-      # ====================================================================
-      # ======================== 修正后的重定向步骤 结束 =======================
-      # ====================================================================
-
       - name: Commit changes
         id: commit
         run: |
